@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: Sohne;
+    src: url('Fonts/Sohne\ Kraftig.ttf');
+}
+
+.header{
+    background-color: #333;
+    color: white;
+    padding: 3%;
+    text-align: left;
+    font-size: 2em;
+    width: 100vw;
+    height: 30vh;
+    font-family: Sohne;
+    font-weight: lighter;
+}
+
+.box{
+    border: 1% white;
+    border-radius: 3%;
+    width: fit-content;
+    text-align: center;
+    font-size: 1em;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+
+.box a{
+    color: white;
+    text-decoration: none;
+}
+
+.box :hover{
+    background-color: red;
+}
+
+.Animals{
+    background-color: blueviolet;
+}
+
+.animal-img img{
+    width: 100%;
+    max-width: 100vw;
+
+}
+
+.footer{
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
