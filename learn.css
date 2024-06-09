@@ -1,0 +1,171 @@
+:root {
+    --image-max-width: 31.2%;
+    --image-gap: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Sohne';
+    src: url('Fonts/Sohne Kraftig.ttf');
+}
+
+@font-face {
+    font-family: 'Sohne-Leicht';
+    src: url('Fonts/SOHNE-BUCH.TTF');
+}
+
+.moving-banner {
+    width: 100vw;
+    height: 40px;
+    background-color: rgb(185, 119, 255);
+    font-family: 'Sohne';
+    font-size: 1.2em;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.background-color {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(200, 200, 200);
+    z-index: -1;
+}
+
+.learn-header {
+    font-family: 'Sohne';
+    color: rgb(43, 43, 43);
+    font-size: 2.65em;
+    font-weight: 200;
+    text-align: left;
+    position: absolute;
+    top: 8.3%;
+    left: 2%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.learn-header img {
+    width: 110px;
+    height: 110px;
+    margin-left: 0px;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.learn-content {
+    padding: 20px;
+    font-family: 'Sohne-Leicht';
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 23.5%;
+    left: 0.5%;
+    right: 2%;
+    z-index: 1;
+}
+
+.learn-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.learn-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.images-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px;
+    position: absolute;
+    top: 87.5%;
+    left: 1.8%;
+    right: 1.8%;
+    gap: var(--image-gap);
+    z-index: 1;
+}
+
+.images-section img {
+    max-width: var(--image-max-width);
+    height: auto;
+    border: 0px solid rgb(35, 35, 35);
+    border-radius: 10px;
+}
+
+.return-home {
+    position: absolute;
+    top: 142.3%;
+    left: 2.3%;
+    padding-bottom: 20px;
+}
+
+.box {
+    border: 2px solid rgb(43, 43, 43);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Sohne';
+    padding: 0 15px;
+    background-color: transparent;
+    color: rgb(43, 43, 43);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: auto;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: rgb(237, 164, 54);
+    color: white;
+    border-color: rgb(237, 164, 54);
+}
+
+.box a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Sohne';
+    transition: color 0.3s ease;
+}
+
+.box:hover a {
+    color: white;
+}
+
+.wwf-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.wwf-link:hover {
+    color: rgb(185, 119, 255);
+}

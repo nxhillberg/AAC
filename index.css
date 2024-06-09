@@ -1,57 +1,205 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     overflow-x: hidden;
 }
 
 @font-face {
     font-family: Sohne;
-    src: url('Fonts/Sohne\ Kraftig.ttf');
+    src: url('Fonts/Sohne Kraftig.ttf');
 }
 
-.header{
-    background-color: #333;
-    color: white;
-    padding: 3%;
-    text-align: left;
-    font-size: 2em;
+@font-face {
+    font-family: Sohne-Leicht;
+    src: url('Fonts/SOHNE-BUCH.TTF');
+}
+
+.moving-banner {
     width: 100vw;
-    height: 30vh;
+    height: 2%;
+    margin: 0;
+    background-color: rgb(185, 119, 255);
     font-family: Sohne;
-    font-weight: lighter;
+    font-size: 1.2em;
+    color: #ffffff;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    top: 0;
+    z-index: 10;
 }
 
-.box{
-    border: 1% white;
-    border-radius: 3%;
-    width: fit-content;
-    text-align: center;
-    font-size: 1em;
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
+.background-color {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(200, 200, 200);
+    z-index: 1;
 }
 
-.box a{
-    color: white;
-    text-decoration: none;
-}
-
-.box :hover{
-    background-color: red;
-}
-
-.Animals{
-    background-color: blueviolet;
-}
-
-.animal-img img{
+.background-image {
+    position: absolute;
     width: 100%;
-    max-width: 100vw;
-
+    height: 100%;
+    background-image: url('img/Tiger.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
 }
 
-.footer{
-    background-color: aquamarine;
-    font-family: Arial, Helvetica, sans-serif;
+.header {
+    font-family: Sohne;
+    color: rgb(43, 43, 43);
+    font-size: 5.3em;
+    font-weight: 200;
+    text-align: left;
+    position: absolute;
+    top: 5.5%;
+    left: 2.2%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header img {
+    width: 110px;
+    height: 110px;
+    margin-left: 35px;
+    margin-top: 20px;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box, .contribution-box {
+    border: 2px solid rgb(43, 43, 43);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: Sohne;
+    position: absolute;
+    padding: 0 15px;
+    background-color: transparent;
+    color: rgb(43, 43, 43);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    z-index: 4;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.box:hover, .contribution-box:hover {
+    background-color: rgb(237, 164, 54);
+    color: white;
+    border-color: rgb(237, 164, 54);
+}
+
+.box {
+    bottom: 41%;
+    left: 2%;
+}
+
+.contribution-box {
+    bottom: 9%;
+    right: 2%;
+}
+
+.box a, .contribution-box a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Sohne;
+    transition: color 0.3s;
+}
+
+.box:hover a, .contribution-box:hover a {
+    color: white;
+}
+
+.info, .contribution-info {
+    font-family: Sohne-Leicht;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    padding: 1%;
+    text-align: left;
+    width: 37.9%;
+    z-index: 4;
+    position: absolute;
+    margin-bottom: 5%;
+}
+
+.info {
+    bottom: 39%;
+    left: 1.15%;
+}
+
+.info-duplicate {
+    bottom: 20%;
+    left: 1.15%;
+}
+
+.contribution-info {
+    bottom: 7%;
+    right: 1.2%;
+    text-align: right;
+    width: 32.2%;
+}
+
+.funds {
+    font-family: Sohne;
+    color: rgb(185, 119, 255);
+    font-size: 4em;
+    text-align: left;
+    bottom: 17.5%;
+    left: 2%;
+    width: 55%;
+    z-index: 4;
+    position: absolute;
+    margin-bottom: 5px;
+}
+
+.goal-text {
+    font-family: Sohne-Leicht;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    text-align: left;
+    bottom: 14%;
+    left: 2%;
+    width: 55%;
+    z-index: 4;
+    position: absolute;
+    margin-bottom: 5px;
+}
+
+.funds-bar {
+    position: absolute;
+    bottom: 11%;
+    left: 2%;
+    width: 37%;
+    height: 15px;
+    background-color: #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 4;
+    margin-top: 5px;
+}
+
+.funds-progress {
+    height: 100%;
+    width: 0;
+    background-color: rgb(82, 223, 85);
+    transition: width 0.5s ease-in-out;
 }

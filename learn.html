@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learn</title>
+    <link rel="stylesheet" href="learn.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/AAC Favicon.png" type="image/png">
+    <link rel="preload" href="img/Chimpanzee Mugshot.webp" as="image">
+    <link rel="preload" href="img/Polar Bear Mugshot.webp" as="image">
+    <link rel="preload" href="img/Tiger Mugshot.webp" as="image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+</head>
+<body>
+    <div class="background-color"></div>
+
+    <div class="moving-banner">
+        <marquee behavior="scroll" direction="right" scrollamount="10">STAND AGAINST WILD ANIMAL CAPTIVITY!</marquee>
+    </div>
+    
+    <div class="header learn-header">
+        <img src="img/AAC Logo.webp" alt="AAC Logo">
+    </div>
+    <div class="learn-content">
+        <h1>Learn About Animal Captivity</h1>
+        <p>
+            Animal captivity has significant negative impacts on the well-being of animals. According to the World Wildlife Fund (WWF), animals in captivity often suffer from stress, anxiety, and depression due to confinement in unnatural environments. This confinement restricts their ability to exhibit natural behaviors and can lead to various health issues.
+        </p>
+        <p>
+            Zoos and aquariums often claim to provide educational value and support conservation efforts. However, the reality is that many captive animals do not thrive in such settings. The lack of space, social structures, and stimulation leads to psychological distress and physical ailments. Additionally, captive breeding programs rarely contribute to the conservation of species in the wild.
+        </p>
+        <p>
+            The WWF emphasizes the importance of preserving natural habitats and protecting wildlife in their natural environments. Instead of supporting captivity, efforts should be focused on conservation initiatives that address habitat destruction, poaching, and other threats to wildlife. By promoting awareness and supporting these initiatives, we can create a better future for all animals.
+        </p>
+        <p>
+            For more information, visit the <a href="https://www.worldwildlife.org/" target="_blank" class="wwf-link">WWF website</a>.
+        </p>
+    </div>
+
+    <div class="images-section">
+        <img loading="eager" src="img/Chimpanzee Mugshot.webp" alt="Mugshot 1">
+        <img loading="lazy" src="img/Polar Bear Mugshot.webp" alt="Mugshot 2">
+        <img loading="lazy" src="img/Tiger Mugshot.webp" alt="Mugshot 3">
+    </div>
+
+    <div class="return-home">
+        <div class="box">
+            <a href="index.html">Return to Home</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            startBannerAnimation();
+        });
+
+        function startBannerAnimation() {
+            const banner = document.querySelector('.moving-banner marquee');
+            banner.style.animation = 'marquee-animation 10s linear infinite';
+        }
+    </script>
+</body>
+</html>

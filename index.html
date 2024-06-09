@@ -5,37 +5,119 @@
     <title>AAC</title>
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/" type="image/x-icon">
-
+    <link rel="shortcut icon" href="img/AAC Favicon.png" type="image/png">
+    <link rel="preload" href="img/Tiger.webp" as="image">
+    <link rel="preload" href="img/AAC Logo.webp" as="image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
 </head>
 
 <body>
-    <div class="header">
-        <h1>Against Animals in Captivity</h1>
-        <!--<p>here you could write something</p>-->
 
-        <div class="box">
-            <a href="learn.html">learn</a>
-        </div>
+<div class="moving-banner">
+    <marquee behavior="scroll" direction="right" scrollamount="10">STAND AGAINST WILD ANIMAL CAPTIVITY!</marquee>
+</div>
 
+<div class="background-color"></div>
+<div class="header">
+    <p>Against Animals in Captivity</p>
+    <img src="img/AAC Logo.webp" alt="AAC Logo">
+</div>
+<div class="background-image"></div>
+
+<div class="background-container">
+    <div id="funds" class="funds">$0.00</div>
+    <div class="goal-text">raised of $100,000 goal</div>
+    <div class="funds-bar">
+        <div id="funds-progress" class="funds-progress"></div>
     </div>
-
-    <div class="Animals">
-        <div class="animal-img">
-            <img src="img/White Background.png" alt="elephant">
-        </div>
-
-        <!--<div class="animal-img">
-            <img src="img/whale.jpg" alt="whale">
-        </div>
-
-        <div class="animal-img">
-            <img src="img/tiger.jpg" alt="tiger">
-        </div>-->
+    <div class="info">
+        <p>Together, we can put a stop to the captivity of wild animals. Captive animals often suffer from stress, anxiety, and health issues due to unnatural environments. Encourage conservation initiatives that preserve wildlife in its native environments, guaranteeing these amazing animals a better future. Read on to find out more about our cause.</p>
     </div>
-
-    <div class="footer">
-        <p>footer here</p>
+    <div class="info-duplicate">
+        <p>Chimpanzees are much lighter than gorillas and they are also significantly taller.</p>
     </div>
+    <div class="box">
+        <a href="learn.html">LEARN</a>
+    </div>
+    <div class="contribution-info">
+        <p>Support our mission to protect wildlife. Your contribution helps fund conservation efforts and, in return, you'll receive an eco-friendly animal figurine as a token of our appreciation.</p>
+    </div>
+    <div class="contribution-box">
+        <a href="contribute.html">MAKE A CONTRIBUTION</a>
+    </div>
+</div>
+
+<div class="vertical-container">
+    <p>Vertical Container Content</p>
+</div>
+
+<div class="footer">
+    <p>footer here</p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        scheduleNextUpdate();
+    });
+
+    function getRandomInitialFunds() {
+        return Math.floor(Math.random() * 10000) + 20000;
+    }
+
+    let funds = parseFloat(localStorage.getItem('funds'));
+
+    if (isNaN(funds)) {
+        funds = getRandomInitialFunds();
+        localStorage.setItem('funds', funds.toFixed(2));
+    }
+
+    const fundsElement = document.getElementById('funds');
+    const fundsProgressElement = document.getElementById('funds-progress');
+    const amounts = [34.99, 29.99, 19.99];
+    const goal = 100000;
+
+    function updateFunds() {
+        const randomAmount = amounts[Math.floor(Math.random() * amounts.length)];
+        let newFunds = funds + randomAmount;
+
+        if (newFunds >= goal) {
+            newFunds = getRandomInitialFunds();
+        }
+
+        animateFunds(funds, newFunds);
+        funds = newFunds;
+        localStorage.setItem('funds', funds.toFixed(2));
+        updateFundsProgress();
+    }
+
+    function animateFunds(start, end) {
+        gsap.fromTo(fundsElement, { innerText: start }, {
+            innerText: end,
+            duration: 3.5,
+            ease: 'power1.inOut',
+            onUpdate: function() {
+                fundsElement.textContent = `$${parseFloat(fundsElement.innerText).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            }
+        });
+    }
+
+    function updateFundsProgress() {
+        const progressPercentage = Math.min((funds / goal) * 100, 100);
+        fundsProgressElement.style.width = `${progressPercentage}%`;
+    }
+
+    function scheduleNextUpdate() {
+        const randomInterval = Math.floor(Math.random() * 34000) + 1000;
+        setTimeout(() => {
+            updateFunds();
+            scheduleNextUpdate();
+        }, randomInterval);
+    }
+
+    fundsElement.textContent = `$${funds.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    updateFundsProgress();
+    scheduleNextUpdate();
+</script>
+
 </body>
 </html>
