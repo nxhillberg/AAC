@@ -9,6 +9,12 @@
     <link rel="preload" href="img/Tiger.webp" as="image">
     <link rel="preload" href="img/AAC Logo.webp" as="image">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+    <style>
+        html, body {
+            overflow: hidden;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -117,6 +123,24 @@
     fundsElement.textContent = `$${funds.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     updateFundsProgress();
     scheduleNextUpdate();
+
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'F12' ||
+            (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+            (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+            (event.ctrlKey && event.key === 'U')) {
+            event.preventDefault();
+        }
+    });
+
+    window.addEventListener('scroll', function(event) {
+        event.preventDefault();
+        window.scrollTo(0, 0);
+    });
 </script>
 
 </body>
