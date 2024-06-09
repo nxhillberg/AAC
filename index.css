@@ -57,20 +57,22 @@
     font-weight: 200;
     text-align: left;
     position: absolute;
-    top: 4.5%;
+    top: 4%;
     left: 2.2%;
     width: 100%;
     z-index: 2;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow: visible;
+    height: auto;
 }
 
 .header img {
     width: 110px;
     height: 110px;
-    margin-left: 35px;
-    margin-top: 20px;
+    margin-left: 38px;
+    margin-top: 30px;
+    z-index: 4;
     animation: rotate 10s linear infinite;
 }
 
