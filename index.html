@@ -16,20 +16,16 @@
         }
     </style>
 </head>
-
 <body>
-
 <div class="moving-banner">
     <marquee behavior="scroll" direction="right" scrollamount="10">STAND AGAINST WILD ANIMAL CAPTIVITY!</marquee>
 </div>
-
 <div class="background-color"></div>
 <div class="header">
     <p>Against Animals in Captivity</p>
     <img src="img/AAC Logo.webp" alt="AAC Logo">
 </div>
 <div class="background-image"></div>
-
 <div class="background-container">
     <div id="funds" class="funds">$0.00</div>
     <div class="goal-text">raised of $100,000 goal</div>
@@ -52,50 +48,39 @@
         <a href="contribute.html">MAKE A CONTRIBUTION</a>
     </div>
 </div>
-
 <div class="vertical-container">
     <p>Vertical Container Content</p>
 </div>
-
 <div class="footer">
     <p>footer here</p>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         scheduleNextUpdate();
     });
-
     function getRandomInitialFunds() {
         return Math.floor(Math.random() * 10000) + 20000;
     }
-
     let funds = parseFloat(localStorage.getItem('funds'));
-
     if (isNaN(funds)) {
         funds = getRandomInitialFunds();
         localStorage.setItem('funds', funds.toFixed(2));
     }
-
     const fundsElement = document.getElementById('funds');
     const fundsProgressElement = document.getElementById('funds-progress');
     const amounts = [34.99, 29.99, 19.99];
     const goal = 100000;
-
     function updateFunds() {
         const randomAmount = amounts[Math.floor(Math.random() * amounts.length)];
         let newFunds = funds + randomAmount;
-
         if (newFunds >= goal) {
             newFunds = getRandomInitialFunds();
         }
-
         animateFunds(funds, newFunds);
         funds = newFunds;
         localStorage.setItem('funds', funds.toFixed(2));
         updateFundsProgress();
     }
-
     function animateFunds(start, end) {
         gsap.fromTo(fundsElement, { innerText: start }, {
             innerText: end,
@@ -106,12 +91,10 @@
             }
         });
     }
-
     function updateFundsProgress() {
         const progressPercentage = Math.min((funds / goal) * 100, 100);
         fundsProgressElement.style.width = `${progressPercentage}%`;
     }
-
     function scheduleNextUpdate() {
         const randomInterval = Math.floor(Math.random() * 34000) + 1000;
         setTimeout(() => {
@@ -119,15 +102,12 @@
             scheduleNextUpdate();
         }, randomInterval);
     }
-
     fundsElement.textContent = `$${funds.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     updateFundsProgress();
     scheduleNextUpdate();
-
     document.addEventListener('contextmenu', function(event) {
         event.preventDefault();
     });
-
     document.addEventListener('keydown', function(event) {
         if (event.key === 'F12' ||
             (event.ctrlKey && event.shiftKey && event.key === 'I') ||
@@ -136,12 +116,10 @@
             event.preventDefault();
         }
     });
-
     window.addEventListener('scroll', function(event) {
         event.preventDefault();
         window.scrollTo(0, 0);
     });
 </script>
-
 </body>
 </html>

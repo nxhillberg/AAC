@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    user-select: none;
 }
 
 @font-face {
@@ -18,6 +19,11 @@
 @font-face {
     font-family: 'Sohne-Leicht';
     src: url('Fonts/SOHNE-BUCH.TTF');
+}
+
+html, body {
+    height: 100%;
+    user-select: none;
 }
 
 .moving-banner {
@@ -33,6 +39,7 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
+    user-select: none;
 }
 
 .background-color {
@@ -41,6 +48,7 @@
     height: 100vh;
     background-color: rgb(200, 200, 200);
     z-index: -1;
+    user-select: none;
 }
 
 .contribution-header {
@@ -57,12 +65,14 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    user-select: none;
 }
 
 .contribution-header img {
     width: 110px;
     height: 110px;
     animation: rotate 10s linear infinite;
+    user-select: none;
 }
 
 @keyframes rotate {
@@ -85,6 +95,7 @@
     right: 0.5%;
     z-index: 1;
     line-height: 1.4;
+    user-select: none;
 }
 
 .contribution-content h1 {
@@ -92,17 +103,20 @@
     margin-bottom: 20px;
     font-family: 'Sohne';
     font-weight: 200;
+    user-select: none;
 }
 
 .contribution-content p {
     font-size: 1.1em;
     margin-bottom: 20px;
     line-height: 1.4;
+    user-select: none;
 }
 
 .content-wrapper {
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .animal-section {
@@ -114,6 +128,7 @@
     margin: 25px 5px 0 5px;
     padding: 0px;
     flex-grow: 1;
+    user-select: none;
 }
 
 .animal-card {
@@ -127,6 +142,7 @@
     color: rgb(255, 255, 255);
     padding-bottom: 15px;
     font-family: 'Sohne-Leicht';
+    user-select: none;
 }
 
 .animal-card p {
@@ -134,6 +150,7 @@
     margin: 30px 20px 20px 20px;
     line-height: 1.4;
     text-align: right;
+    user-select: none;
 }
 
 .image-container {
@@ -143,17 +160,20 @@
     overflow: hidden;
     margin-bottom: 0;
     background-color: transparent;
+    user-select: none;
 }
 
 .images {
     display: flex;
     transition: transform 0.5s ease-in-out;
     overflow: hidden;
+    user-select: none;
 }
 
 .images img {
     width: 100%;
     border-radius: 10px;
+    user-select: none;
 }
 
 .image-grid {
@@ -164,6 +184,7 @@
     margin-top: 10px;
     padding: 0 10px;
     overflow: hidden;
+    user-select: none;
 }
 
 .image-grid img {
@@ -172,6 +193,7 @@
     cursor: pointer;
     border-radius: 5px;
     transition: transform 0.2s ease;
+    user-select: none;
 }
 
 .image-grid img:hover {
@@ -180,6 +202,7 @@
 
 .hidden {
     display: none;
+    user-select: none;
 }
 
 .price-and-button {
@@ -188,6 +211,7 @@
     align-items: center;
     padding-top: 10px;
     padding-right: 20px;
+    user-select: none;
 }
 
 .price {
@@ -195,6 +219,7 @@
     font-size: 2em;
     color: rgb(185, 119, 255);
     margin-right: 15px;
+    user-select: none;
 }
 
 .box, .buy-button {
@@ -212,6 +237,7 @@
     height: 40px;
     width: auto;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    user-select: none;
 }
 
 .box:hover, .buy-button:hover {
@@ -226,6 +252,7 @@
     display: inline-block;
     font-family: 'Sohne';
     transition: color 0.3s ease;
+    user-select: none;
 }
 
 .box:hover a, .buy-button:hover a {
@@ -235,6 +262,7 @@
 .return-home {
     padding-bottom: 0px;
     margin-left: 3px;
+    user-select: none;
 }
 
 .return-home .box {
@@ -253,6 +281,7 @@
     width: auto;
     margin-top: 50px;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    user-select: none;
 }
 
 .return-home .box:hover {
@@ -267,19 +296,20 @@
     display: inline-block;
     font-family: 'Sohne';
     transition: color 0.3s ease;
+    user-select: none;
 }
 
 .return-home .box:hover a {
     color: white;
 }
 
-/* Accordion Styles */
 .accordion {
     background-color: #f1f1f1;
     border-radius: 15px;
     margin: 10px 20px;
     font-family: 'Sohne-Leicht';
     color: rgb(43, 43, 43);
+    user-select: none;
 }
 
 .accordion-button {
@@ -297,6 +327,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
 }
 
 .accordion-button::before {
@@ -307,6 +338,7 @@
     height: 16px;
     transition: transform 0.3s ease, background 0.3s ease;
     margin-right: auto;
+    user-select: none;
 }
 
 .accordion-button.active::before {
@@ -333,9 +365,11 @@
     background-color: rgb(200, 200, 200);
     transition: max-height 0.3s ease;
     text-align: right;
+    user-select: none;
 }
 
 .accordion-content p {
     margin: 10px 0;
     text-align: right;
+    user-select: none;
 }

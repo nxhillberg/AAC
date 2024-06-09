@@ -8,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    user-select: none;
 }
 
 @font-face {
@@ -33,6 +34,7 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
+    user-select: none;
 }
 
 .background-color {
@@ -41,6 +43,7 @@
     height: 100vh;
     background-color: rgb(200, 200, 200);
     z-index: -1;
+    user-select: none;
 }
 
 .learn-header {
@@ -57,6 +60,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    user-select: none;
 }
 
 .learn-header img {
@@ -64,6 +68,7 @@
     height: 110px;
     margin-left: 0px;
     animation: rotate 10s linear infinite;
+    user-select: none;
 }
 
 @keyframes rotate {
@@ -85,17 +90,20 @@
     left: 0.5%;
     right: 2%;
     z-index: 1;
+    user-select: none;
 }
 
 .learn-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    user-select: none;
 }
 
 .learn-content p {
     font-size: 1.1em;
     margin-bottom: 20px;
     line-height: 1.4;
+    user-select: none;
 }
 
 .images-section {
@@ -109,6 +117,7 @@
     right: 1.8%;
     gap: var(--image-gap);
     z-index: 1;
+    user-select: none;
 }
 
 .images-section img {
@@ -116,6 +125,7 @@
     height: auto;
     border: 0px solid rgb(35, 35, 35);
     border-radius: 10px;
+    user-select: none;
 }
 
 .return-home {
@@ -123,6 +133,7 @@
     top: 142.3%;
     left: 2.3%;
     padding-bottom: 20px;
+    user-select: none;
 }
 
 .box {
@@ -141,6 +152,7 @@
     width: auto;
     margin-top: 40px;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    user-select: none;
 }
 
 .box:hover {
@@ -155,6 +167,7 @@
     display: inline-block;
     font-family: 'Sohne';
     transition: color 0.3s ease;
+    user-select: none;
 }
 
 .box:hover a {
@@ -164,6 +177,7 @@
 .wwf-link {
     color: white;
     transition: color 0.3s ease;
+    user-select: none;
 }
 
 .wwf-link:hover {
