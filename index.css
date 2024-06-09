@@ -57,7 +57,7 @@
     font-weight: 200;
     text-align: left;
     position: absolute;
-    top: 5.5%;
+    top: 4.5%;
     left: 2.2%;
     width: 100%;
     z-index: 2;
@@ -67,8 +67,8 @@
 }
 
 .header img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     margin-left: 35px;
     margin-top: 20px;
     animation: rotate 10s linear infinite;
@@ -108,7 +108,7 @@
 }
 
 .box {
-    bottom: 41%;
+    bottom: 44%;
     left: 2%;
 }
 
@@ -142,7 +142,7 @@
 }
 
 .info {
-    bottom: 39%;
+    bottom: 42%;
     left: 1.15%;
 }
 
