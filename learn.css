@@ -2,7 +2,6 @@
     --image-max-width: 31.2%;
     --image-gap: 20px;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -10,17 +9,14 @@
     overflow-x: hidden;
     user-select: none;
 }
-
 @font-face {
     font-family: 'Sohne';
     src: url('Fonts/Sohne Kraftig.ttf');
 }
-
 @font-face {
     font-family: 'Sohne-Leicht';
     src: url('Fonts/SOHNE-BUCH.TTF');
 }
-
 .moving-banner {
     width: 100vw;
     height: 40px;
@@ -36,7 +32,6 @@
     white-space: nowrap;
     user-select: none;
 }
-
 .background-color {
     position: fixed;
     width: 100vw;
@@ -45,7 +40,6 @@
     z-index: -1;
     user-select: none;
 }
-
 .learn-header {
     font-family: 'Sohne';
     color: rgb(43, 43, 43);
@@ -62,7 +56,6 @@
     overflow: hidden;
     user-select: none;
 }
-
 .learn-header img {
     width: 110px;
     height: 110px;
@@ -70,7 +63,6 @@
     animation: rotate 10s linear infinite;
     user-select: none;
 }
-
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -79,7 +71,6 @@
         transform: rotate(360deg);
     }
 }
-
 .learn-content {
     padding: 20px;
     font-family: 'Sohne-Leicht';
@@ -92,20 +83,17 @@
     z-index: 1;
     user-select: none;
 }
-
 .learn-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
     user-select: none;
 }
-
 .learn-content p {
     font-size: 1.1em;
     margin-bottom: 20px;
     line-height: 1.4;
     user-select: none;
 }
-
 .images-section {
     display: flex;
     justify-content: space-around;
@@ -119,7 +107,6 @@
     z-index: 1;
     user-select: none;
 }
-
 .images-section img {
     max-width: var(--image-max-width);
     height: auto;
@@ -127,7 +114,6 @@
     border-radius: 10px;
     user-select: none;
 }
-
 .return-home {
     position: absolute;
     top: 142.3%;
@@ -135,7 +121,6 @@
     padding-bottom: 20px;
     user-select: none;
 }
-
 .box {
     border: 2px solid rgb(43, 43, 43);
     border-radius: 30px;
@@ -154,13 +139,11 @@
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     user-select: none;
 }
-
 .box:hover {
     background-color: rgb(237, 164, 54);
     color: white;
     border-color: rgb(237, 164, 54);
 }
-
 .box a {
     color: inherit;
     text-decoration: none;
@@ -169,17 +152,14 @@
     transition: color 0.3s ease;
     user-select: none;
 }
-
 .box:hover a {
     color: white;
 }
-
 .wwf-link {
     color: white;
     transition: color 0.3s ease;
     user-select: none;
 }
-
 .wwf-link:hover {
     color: rgb(185, 119, 255);
 }

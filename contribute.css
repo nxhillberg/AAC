@@ -2,7 +2,6 @@
     --image-max-width: 30%;
     --image-gap: 30px;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -10,22 +9,18 @@
     overflow-x: hidden;
     user-select: none;
 }
-
 @font-face {
     font-family: 'Sohne';
     src: url('Fonts/Sohne Kraftig.ttf');
 }
-
 @font-face {
     font-family: 'Sohne-Leicht';
     src: url('Fonts/SOHNE-BUCH.TTF');
 }
-
 html, body {
     height: 100%;
     user-select: none;
 }
-
 .moving-banner {
     width: 100vw;
     height: 40px;
@@ -41,7 +36,6 @@ html, body {
     white-space: nowrap;
     user-select: none;
 }
-
 .background-color {
     position: fixed;
     width: 100vw;
@@ -50,7 +44,6 @@ html, body {
     z-index: -1;
     user-select: none;
 }
-
 .contribution-header {
     font-family: 'Sohne';
     color: rgb(43, 43, 43);
@@ -67,14 +60,12 @@ html, body {
     overflow: hidden;
     user-select: none;
 }
-
 .contribution-header img {
     width: 110px;
     height: 110px;
     animation: rotate 10s linear infinite;
     user-select: none;
 }
-
 @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -83,7 +74,6 @@ html, body {
         transform: rotate(360deg);
     }
 }
-
 .contribution-content {
     padding: 20px;
     font-family: 'Sohne-Leicht';
@@ -97,7 +87,6 @@ html, body {
     line-height: 1.4;
     user-select: none;
 }
-
 .contribution-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -105,20 +94,17 @@ html, body {
     font-weight: 200;
     user-select: none;
 }
-
 .contribution-content p {
     font-size: 1.1em;
     margin-bottom: 20px;
     line-height: 1.4;
     user-select: none;
 }
-
 .content-wrapper {
     display: flex;
     flex-direction: column;
     user-select: none;
 }
-
 .animal-section {
     display: flex;
     justify-content: space-around;
@@ -130,7 +116,6 @@ html, body {
     flex-grow: 1;
     user-select: none;
 }
-
 .animal-card {
     background-color: transparent;
     border: 2px solid rgb(35, 35, 35);
@@ -144,7 +129,6 @@ html, body {
     font-family: 'Sohne-Leicht';
     user-select: none;
 }
-
 .animal-card p {
     font-size: 1em;
     margin: 30px 20px 20px 20px;
@@ -152,7 +136,6 @@ html, body {
     text-align: right;
     user-select: none;
 }
-
 .image-container {
     position: relative;
     width: 100%;
@@ -162,20 +145,17 @@ html, body {
     background-color: transparent;
     user-select: none;
 }
-
 .images {
     display: flex;
     transition: transform 0.5s ease-in-out;
     overflow: hidden;
     user-select: none;
 }
-
 .images img {
     width: 100%;
     border-radius: 10px;
     user-select: none;
 }
-
 .image-grid {
     display: flex;
     justify-content: space-around;
@@ -186,7 +166,6 @@ html, body {
     overflow: hidden;
     user-select: none;
 }
-
 .image-grid img {
     width: calc(24% - 5px);
     height: auto;
@@ -195,16 +174,13 @@ html, body {
     transition: transform 0.2s ease;
     user-select: none;
 }
-
 .image-grid img:hover {
     transform: scale(1.1);
 }
-
 .hidden {
     display: none;
     user-select: none;
 }
-
 .price-and-button {
     display: flex;
     justify-content: flex-end;
@@ -213,7 +189,6 @@ html, body {
     padding-right: 20px;
     user-select: none;
 }
-
 .price {
     font-family: 'Sohne';
     font-size: 2em;
@@ -221,7 +196,6 @@ html, body {
     margin-right: 15px;
     user-select: none;
 }
-
 .box, .buy-button {
     border: 2px solid rgb(43, 43, 43);
     border-radius: 30px;
@@ -239,13 +213,11 @@ html, body {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     user-select: none;
 }
-
 .box:hover, .buy-button:hover {
     background-color: rgb(237, 164, 54);
     color: white;
     border-color: rgb(237, 164, 54);
 }
-
 .box a, .buy-button a {
     color: inherit;
     text-decoration: none;
@@ -254,17 +226,14 @@ html, body {
     transition: color 0.3s ease;
     user-select: none;
 }
-
 .box:hover a, .buy-button:hover a {
     color: white;
 }
-
 .return-home {
     padding-bottom: 0px;
     margin-left: 3px;
     user-select: none;
 }
-
 .return-home .box {
     border: 2px solid rgb(43, 43, 43);
     border-radius: 30px;
@@ -283,13 +252,11 @@ html, body {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     user-select: none;
 }
-
 .return-home .box:hover {
     background-color: rgb(237, 164, 54);
     color: white;
     border-color: rgb(237, 164, 54);
 }
-
 .return-home .box a {
     color: inherit;
     text-decoration: none;
@@ -298,11 +265,9 @@ html, body {
     transition: color 0.3s ease;
     user-select: none;
 }
-
 .return-home .box:hover a {
     color: white;
 }
-
 .accordion {
     background-color: #f1f1f1;
     border-radius: 15px;
@@ -311,7 +276,6 @@ html, body {
     color: rgb(43, 43, 43);
     user-select: none;
 }
-
 .accordion-button {
     background-color: #ccc;
     color: rgb(43, 43, 43);
@@ -329,7 +293,6 @@ html, body {
     align-items: center;
     user-select: none;
 }
-
 .accordion-button::before {
     content: '';
     background: url('img/Arrow.webp') no-repeat center center;
@@ -340,24 +303,19 @@ html, body {
     margin-right: auto;
     user-select: none;
 }
-
 .accordion-button.active::before {
     transform: rotate(180deg);
 }
-
 .accordion-button:hover::before {
     background: url('img/Arrow Green.webp') no-repeat center center;
     background-size: contain;
 }
-
 .accordion-button:hover {
     background-color: #ddd;
 }
-
 .accordion-button.active {
     background-color: #ddd;
 }
-
 .accordion-content {
     padding: 0 20px;
     max-height: 0;
@@ -367,7 +325,6 @@ html, body {
     text-align: right;
     user-select: none;
 }
-
 .accordion-content p {
     margin: 10px 0;
     text-align: right;

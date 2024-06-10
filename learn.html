@@ -17,7 +17,6 @@
     <div class="moving-banner">
         <marquee behavior="scroll" direction="right" scrollamount="10">STAND AGAINST WILD ANIMAL CAPTIVITY!</marquee>
     </div>
-    
     <div class="header learn-header">
         <img src="img/AAC Logo.webp" alt="AAC Logo">
     </div>
@@ -36,33 +35,27 @@
             For more information, visit the <a href="https://www.worldwildlife.org/" target="_blank" class="wwf-link">WWF website</a>.
         </p>
     </div>
-
     <div class="images-section">
         <img loading="eager" src="img/Chimpanzee Mugshot.webp" alt="Mugshot 1">
         <img loading="lazy" src="img/Polar Bear Mugshot.webp" alt="Mugshot 2">
         <img loading="lazy" src="img/Tiger Mugshot.webp" alt="Mugshot 3">
     </div>
-
     <div class="return-home">
         <div class="box">
             <a href="index.html">Return to Home</a>
         </div>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             startBannerAnimation();
         });
-
         function startBannerAnimation() {
             const banner = document.querySelector('.moving-banner marquee');
             banner.style.animation = 'marquee-animation 10s linear infinite';
         }
-
         document.addEventListener('contextmenu', function(event) {
             event.preventDefault();
         });
-
         document.addEventListener('keydown', function(event) {
             if (event.key === 'F12' ||
                 (event.ctrlKey && event.shiftKey && event.key === 'I') ||
